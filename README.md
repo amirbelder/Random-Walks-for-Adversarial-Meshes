@@ -80,11 +80,3 @@ And so, by changing them, we assure that the networks perform all its needed pre
 An example of such saving for SHREC11 can be found in the npz_to_obj.py file.
 This is not necessary at the Walker attacked files, as they are already in format. 
 
-## Troubleshooting
-If rendering using `opengl` doesn't work, 
-it might be because `LANG` environment parameter is not set to `en_US`.
-
-To fix it just write: `LANG=en_US` in command line and then run the python script.
-
-If you use PyCharm, go to: `Run -> Edit Configurations...` and add `
-;LANG=en_US` to the `Environment variables:`
