@@ -1,0 +1,49 @@
+
+#General Info
+gpu_to_use: 1 # -1 if we want to use all the GPUS
+use_prev_model: False
+description: "Mesh-net copycat network training"
+trained_model: 'trained_models/meshCNN_imitating_network'
+#trained_model: 'trained_models/pd_meshnet_ditto_model'
+
+# 'WALKER', 'MESHCNN', 'PDMESHNET', 'MESHNET'
+arch: 'MESHNET'
+# 'SHREC11', 'MODELNET40'
+dataset: 'MODELNET40'
+dataset_path: ''
+
+dump_timings: False
+x_server_exists: True
+
+
+job: 'shrec11' #'shrec11' #'mesh_net'
+job_part: '16-04_a' #'16_4'
+# choose network task from: 'features_extraction', 'unsupervised_classification', 'semantic_segmentation', 'classification', 'manifold_classification'.
+network_task: 'manifold_classification'
+trained_only_2_classes: False
+train_several_classes: False
+
+# Manifold params
+#'sparse_only' #'manifold_only' #'both'
+sparse_or_manifold: 'manifold_only'
+non_zero_ratio: 2
+
+# Deform Training params
+attacking_weight: 0.01
+max_label_diff: 0.001
+pred_close_enough_to_target: 0.9
+max_iter: 20_000
+iter_2_change_weight: 1_000
+show_model_every: 100_001
+
+walk_len: 800
+num_walks_per_iter: 1
+use_last: True
+
+# logger options
+image_save_iter:  100       # How often do you want to save output images during training
+plot_iter: 10
+image_display_iter: 100       # How often do you want to display output images during training
+display_size: 15              # How many images do you want to display each time
+snapshot_save_iter: 10_000    # How often do you want to save trained models
+log_iter: 1                   # How often do you want to log the training stats
