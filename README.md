@@ -73,7 +73,7 @@ They will be saved according to the different networks, i.e.: '../attacks/imitat
 ## Pretrained
 All five pretrained imitating networks can be found here: [pretrained](https://technionmail-my.sharepoint.com/personal/alon_lahav_campus_technion_ac_il/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Falon%5Flahav%5Fcampus%5Ftechnion%5Fac%5Fil%2FDocuments%2Fmesh%5Fwalker%2Fpretrained)  models to run evaluation only. 
 
-##Check Results
+## Results
 In order to check how the attacked affected the original SOTA system we advise to save the changed vertices and faces in an obj file.
 Each of the SOTA systems uses these obj files while testing.
 And so, by changing them, we assure that the networks perform all its needed precprocessing.
